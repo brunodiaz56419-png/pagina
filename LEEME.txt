@@ -1,0 +1,23 @@
+SITIO UPVM (menú + encuesta + CRUD) - listo para Render
+Todos los archivos están en UNA sola carpeta, sin subcarpetas.
+
+ARCHIVOS
+  index.php      Menú principal (raíz del sitio).
+  encuesta.html  Formulario de 5 preguntas.
+  guardar.php    Guarda la respuesta en MySQL y redirige a regalo.html.
+  regalo.html    Página final.
+  crud.php       Sistema de ventas (usuarios, productos, ventas).
+  config.php     Lee la conexión de variables de entorno con getenv(). SIN contraseñas.
+  style.css, perfil.jpg   Estilos e imagen.
+  Dockerfile     Receta para Render (PHP 8.3 + Apache).
+  base_datos.sql, encuesta_datos_ejemplo.sql   Se importan UNA vez a MySQL (Railway).
+
+VARIABLES DE ENTORNO EN RENDER (Environment Variables)
+  DB_HOST, DB_PORT, DB_USER, DB_PASS, DB_NAME   (host PUBLICO de Railway: *.proxy.rlwy.net)
+  ORS_API_KEY   (opcional; solo para el botón de ruta del mapa)
+
+IMPORTAR LAS TABLAS EN RAILWAY (una sola vez)
+  Desde tu computadora, con el host público de Railway:
+    mysql -h HOST -P PUERTO -u USUARIO -p NOMBRE_BD < base_datos.sql
+  o abre el servicio MySQL en Railway > Data > y ejecuta el contenido de base_datos.sql.
+  Debes ver 4 tablas: usuarios, productos, ventas y respuestas.

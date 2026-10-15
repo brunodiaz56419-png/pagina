@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¡Gracias! · Encuesta UPVM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+
+<aside class="lateral">
+  <div class="perfil">
+    <img src="perfil.jpg" alt="Mi foto">
+    <strong>Encuesta UPVM</strong>
+  </div>
+  <nav aria-label="Navegación principal">
+    <a href="index.php">Menú principal</a>
+    <a href="encuesta.html">Encuesta</a>
+    <a href="crud.php">CRUD de ventas</a>
+  </nav>
+  <p class="marca">Aplicaciones web orientadas a servicios</p>
+</aside>
+
+<main class="contenido">
+  <header class="cabecera"><h1>Respuesta enviada</h1></header>
+
+  <section class="portada">
+    <div class="portada-texto">
+      <h2>¡Gracias por<br>responder!</h2>
+      <p>Tu opinión ya quedó guardada. Tengo un regalo para ti: tócalo para abrirlo.</p>
+    </div>
+    <img class="portada-foto" src="perfil.jpg" alt="Mi foto">
+  </section>
+
+  <section class="panel regalo">
+    <button class="caja" id="caja" type="button" aria-label="Abrir regalo">🎁</button>
+
+    <div class="premio estimado" id="premio" role="status">
+      <strong>¡FELICIDADES!</strong>
+      <small>Malgastaste tu tiempo contestando mi encuesta 🤣.</small>
+    </div>
+
+    <div class="fila-botones">
+      <a class="btn btn-sec" href="index.php">Volver al menú</a>
+    </div>
+  </section>
+</main>
+
+<script>
+  var caja = document.getElementById('caja');
+  caja.addEventListener('click', function () {
+    caja.classList.add('abierta');
+    caja.textContent = '🎉';
+    document.getElementById('premio').style.display = 'block';
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Nunca subas credenciales
+.env
+*.env
+config.local.php

@@ -1,0 +1,6 @@
+*.sql
+LEEME.txt
+.git
+.gitignore
+Dockerfile
+.dockerignore

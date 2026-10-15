@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Encuesta UPVM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+
+<aside class="lateral">
+  <div class="perfil">
+    <img src="perfil.jpg" alt="Mi foto">
+    <strong>Encuesta UPVM</strong>
+  </div>
+  <nav aria-label="Navegación principal">
+    <a href="index.php">Menú principal</a>
+    <a href="encuesta.html" class="activo">Encuesta</a>
+    <a href="crud.php">CRUD de ventas</a>
+  </nav>
+  <p class="marca">Aplicaciones web orientadas a servicios</p>
+</aside>
+
+<main class="contenido">
+  <header class="cabecera"><h1>Tu opinión sobre la UPVM</h1></header>
+
+  <div class="aviso aviso-error" id="error" role="alert" hidden></div>
+
+  <section class="panel panel-form">
+    <h3>Encuesta <span class="tag tag-leer">5 preguntas</span></h3>
+    <p class="intro">Todas las preguntas son obligatorias. Es anónima y tarda menos de un minuto.</p>
+
+    <form action="guardar.php" method="POST">
+
+      <div class="campo">
+        <label for="profesores">1. ¿Cómo calificas a tus profesores en general?</label>
+        <select id="profesores" name="profesores" required>
+          <option value="">Elige una opción</option>
+          <option>Excelente</option>
+          <option>Bueno</option>
+          <option>Regular</option>
+          <option>Malo</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="instalacion">2. ¿Qué instalación necesita más mejoras?</label>
+        <select id="instalacion" name="instalacion" required>
+          <option value="">Elige una opción</option>
+          <option>Aulas</option>
+          <option>Laboratorios</option>
+          <option>Biblioteca</option>
+          <option>Cafetería</option>
+          <option>Baños</option>
+          <option>Estacionamiento</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="wifi">3. ¿Qué tan buena es la conexión WiFi del campus?</label>
+        <select id="wifi" name="wifi" required>
+          <option value="">Elige una opción</option>
+          <option>Muy buena</option>
+          <option>Aceptable</option>
+          <option>Mala</option>
+          <option>No hay señal donde estoy</option>
+        </select>
+      </div>
+
+      <fieldset class="campo">
+        <legend>4. ¿Con qué frecuencia usas la biblioteca?</legend>
+        <div class="opciones-radio">
+          <label class="check"><input type="radio" name="biblioteca" value="Diario" required> Todos los días</label>
+          <label class="check"><input type="radio" name="biblioteca" value="Semanal"> Una vez por semana</label>
+          <label class="check"><input type="radio" name="biblioteca" value="Casi nunca"> Casi nunca</label>
+        </div>
+      </fieldset>
+
+      <div class="campo">
+        <label for="sugerencia">5. ¿Qué es lo primero que cambiarías en la UPVM?</label>
+        <textarea id="sugerencia" name="sugerencia" maxlength="300" required></textarea>
+        <div class="contador"><span id="cuenta">0</span>/300</div>
+      </div>
+
+      <div class="fila-botones">
+        <button class="btn btn-primario" type="submit">Enviar respuestas</button>
+        <a class="btn btn-sec" href="index.php">Cancelar</a>
+      </div>
+    </form>
+  </section>
+</main>
+
+<script>
+  var txt = document.getElementById('sugerencia'), cuenta = document.getElementById('cuenta');
+  txt.addEventListener('input', function () { cuenta.textContent = txt.value.length; });
+
+  var err = new URLSearchParams(location.search).get('error');
+  if (err) {
+    var caja = document.getElementById('error');
+    caja.textContent = err === 'bd'
+      ? 'No se pudo guardar tu respuesta. Intenta de nuevo en un momento.'
+      : 'Revisa que hayas contestado las 5 preguntas.';
+    caja.hidden = false;
+  }
+</script>
+</body>
+</html>
