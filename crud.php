@@ -253,6 +253,7 @@ $titulos = ['inicio' => 'Panel de control', 'usuarios' => 'Usuarios', 'productos
   <nav class="nav-extra">
     <a href="index.php">&larr; Menú principal</a>
     <a href="encuesta.html">Ir a la encuesta</a>
+    <a href="video.html">Ver video</a>
   </nav>
   <p class="marca"><?= e(TITULO_PANEL) ?></p>
 </aside>
@@ -605,3 +606,4 @@ $titulos = ['inicio' => 'Panel de control', 'usuarios' => 'Usuarios', 'productos
 </main>
 </body>
 </html>
+
