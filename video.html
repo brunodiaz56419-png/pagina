@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video · UPVM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+
+<aside class="lateral">
+  <div class="perfil">
+    <img src="perfil.jpg" alt="Mi foto">
+    <strong>Encuesta UPVM</strong>
+  </div>
+  <nav aria-label="Navegación principal">
+    <a href="index.php">Menú principal</a>
+    <a href="encuesta.html">Encuesta</a>
+    <a href="crud.php">CRUD de ventas</a>
+    <a href="video.html" class="activo">Ver video</a>
+  </nav>
+  <p class="marca">Aplicaciones web orientadas a servicios</p>
+</aside>
+
+<main class="contenido">
+  <header class="cabecera"><h1>Ver video</h1></header>
+
+  <section class="panel video-panel">
+    <div class="video-marco">
+      <iframe
+        src="https://www.youtube.com/embed/IRxFA3W6N5I?rel=0"
+        title="Video de YouTube"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+    <div class="fila-botones">
+      <a class="btn btn-sec" href="index.php">Volver al menú</a>
+      <a class="btn btn-sec" href="https://youtube.com/shorts/IRxFA3W6N5I" target="_blank" rel="noopener">Abrir en YouTube</a>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
