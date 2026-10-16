@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -20,6 +20,7 @@
     <a href="index.php" class="activo">Menú principal</a>
     <a href="encuesta.html">Encuesta</a>
     <a href="crud.php">CRUD de ventas</a>
+    <a href="video.html">Ver video</a>
   </nav>
   <p class="marca">Aplicaciones web orientadas a servicios</p>
 </aside>
@@ -30,7 +31,7 @@
   <section class="portada">
     <div class="portada-texto">
       <h2>¿A dónde<br>quieres ir?</h2>
-      <p>Contesta la encuesta sobre la UPVM o entra al panel CRUD para administrar usuarios, productos y ventas.</p>
+      <p>Contesta la encuesta sobre la UPVM, entra al panel CRUD para administrar usuarios, productos y ventas o mira un video.</p>
     </div>
     <img class="portada-foto" src="perfil.jpg" alt="Mi foto">
   </section>
@@ -45,6 +46,11 @@
       <h3>CRUD · Sistema de ventas <span class="tag tag-act">Panel</span></h3>
       <p>Administra usuarios, productos y ventas: crear, leer, actualizar y eliminar registros.</p>
       <a class="btn btn-sec" href="crud.php">Abrir el CRUD</a>
+    </article>
+    <article class="panel video">
+      <h3>Video <span class="tag tag-act">YouTube</span></h3>
+      <p>Mira el video directamente aquí, sin salir del sitio.</p>
+      <a class="btn btn-sec" href="video.html">Ver el video</a>
     </article>
   </section>
 </main>
